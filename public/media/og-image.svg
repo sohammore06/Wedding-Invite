@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <rect width="1200" height="630" fill="#FBF3E7"/>
+  <rect x="50" y="50" width="1100" height="530" rx="8" stroke="#C9A24B" stroke-width="2" fill="none" opacity="0.4"/>
+  <text x="600" y="280" text-anchor="middle" fill="#7A2E3B" font-family="serif" font-size="72" font-style="italic">Shruti &amp; Aditya</text>
+  <text x="600" y="360" text-anchor="middle" fill="#C9A24B" font-family="serif" font-size="36">30th November 2026</text>
+  <text x="600" y="420" text-anchor="middle" fill="#5C6E51" font-family="sans-serif" font-size="24">You're Invited</text>
+</svg>

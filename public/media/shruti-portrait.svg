@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" fill="none">
+  <rect width="200" height="240" rx="12" fill="#F3DFC1"/>
+  <ellipse cx="100" cy="70" rx="40" ry="45" fill="#E8C4A0"/>
+  <path d="M60 115 Q100 125 140 115 L150 220 Q100 235 50 220 Z" fill="#7A2E3B" opacity="0.6"/>
+  <text x="100" y="230" text-anchor="middle" fill="#7A2E3B" font-size="10" opacity="0.5">Shruti</text>
+</svg>

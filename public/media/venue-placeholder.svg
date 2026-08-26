@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="8" fill="#F3DFC1" stroke="#C9A24B" stroke-width="1"/>
+  <path d="M30 80 L60 30 L90 80" stroke="#5C6E51" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <text x="60" y="105" text-anchor="middle" fill="#7A2E3B" font-size="9" opacity="0.5">Venue photos soon</text>
+</svg>

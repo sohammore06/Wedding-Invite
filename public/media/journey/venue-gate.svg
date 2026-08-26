@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 140" fill="none" aria-hidden="true">
+  <!-- Soft base -->
+  <ellipse cx="80" cy="128" rx="54" ry="8" fill="#7A2E3B" opacity="0.1"/>
+  <!-- Steps -->
+  <path d="M40 118 H120 L112 128 H48Z" fill="#E8C4A0" opacity="0.55"/>
+  <!-- Pillars -->
+  <rect x="36" y="48" width="14" height="70" rx="2" fill="#7A2E3B"/>
+  <rect x="110" y="48" width="14" height="70" rx="2" fill="#7A2E3B"/>
+  <!-- Pillar gold caps -->
+  <rect x="32" y="42" width="22" height="8" rx="2" fill="#C9A24B"/>
+  <rect x="106" y="42" width="22" height="8" rx="2" fill="#C9A24B"/>
+  <!-- Arch -->
+  <path d="M50 70 C50 38, 110 38, 110 70" stroke="#C9A24B" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M50 70 C50 42, 110 42, 110 70" stroke="#7A2E3B" stroke-width="2.5" fill="none" opacity="0.5"/>
+  <!-- Toran / hanging florals -->
+  <circle cx="68" cy="58" r="3" fill="#C9A24B"/>
+  <circle cx="80" cy="62" r="3.5" fill="#7A2E3B"/>
+  <circle cx="92" cy="58" r="3" fill="#5C6E51"/>
+  <path d="M68 61 V72 M80 65 V78 M92 61 V72" stroke="#C9A24B" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+  <!-- Mandala hint on lintel -->
+  <circle cx="80" cy="48" r="5" stroke="#C9A24B" stroke-width="1.2" fill="none"/>
+  <circle cx="80" cy="48" r="2" fill="#C9A24B"/>
+</svg>

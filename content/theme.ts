@@ -1,0 +1,93 @@
+export type SectionMood = "day" | "night" | "celebration";
+
+export const theme = {
+  colors: {
+    primary: {
+      50: "#F9ECEE",
+      100: "#F0D4D9",
+      200: "#E0A9B4",
+      300: "#C97A8A",
+      400: "#A84F62",
+      500: "#7A2E3B",
+      600: "#662733",
+      700: "#521F29",
+      800: "#3D171F",
+      900: "#291015",
+    },
+    secondary: {
+      50: "#FDF9F4",
+      100: "#F9F0E4",
+      200: "#F3DFC1",
+      300: "#E8C4A0",
+      400: "#D9A87A",
+      500: "#C48E5C",
+      600: "#A67448",
+      700: "#855A38",
+      800: "#634228",
+      900: "#422B1A",
+    },
+    tertiary: {
+      50: "#F2F4F0",
+      100: "#E0E5DA",
+      200: "#C1CCB5",
+      300: "#9DAD8E",
+      400: "#7A8F6A",
+      500: "#5C6E51",
+      600: "#4A5841",
+      700: "#384231",
+      800: "#262C21",
+      900: "#141711",
+    },
+    accent: {
+      50: "#FBF5E6",
+      100: "#F5E8C4",
+      200: "#EBD494",
+      300: "#DFBD63",
+      400: "#D4AA45",
+      500: "#C9A24B",
+      600: "#A8843C",
+      700: "#87662E",
+      800: "#654A21",
+      900: "#432F15",
+    },
+    neutral: {
+      50: "#FEFCF9",
+      100: "#FBF3E7",
+      200: "#F5E8D5",
+      300: "#E8D5BA",
+      400: "#D4BC9A",
+      500: "#B89E7A",
+      600: "#967D5E",
+      700: "#735E47",
+      800: "#504030",
+      900: "#2E241A",
+    },
+  },
+  fonts: {
+    display: "Cormorant Garamond",
+    body: "Jost",
+    script: "Tangerine",
+  },
+  sectionMoods: {
+    loading: "day" as SectionMood,
+    envelope: "day" as SectionMood,
+    hero: "day" as SectionMood,
+    story: "day" as SectionMood,
+    journey: "day" as SectionMood,
+    couple: "celebration" as SectionMood,
+    timeline: "celebration" as SectionMood,
+    venue: "day" as SectionMood,
+    gallery: "celebration" as SectionMood,
+    rsvp: "night" as SectionMood,
+    footer: "night" as SectionMood,
+  },
+  gradients: {
+    royal: "linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-700) 50%, var(--color-tertiary-600) 100%)",
+    goldFoil:
+      "linear-gradient(135deg, #E8C872 0%, #C9A24B 35%, #F5E6A8 50%, #B8860B 65%, #D4AF37 100%)",
+    champagne:
+      "linear-gradient(180deg, var(--color-secondary-100) 0%, var(--color-neutral-100) 100%)",
+  },
+} as const;
+
+export type Theme = typeof theme;

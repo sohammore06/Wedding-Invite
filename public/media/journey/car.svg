@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 72" fill="none" aria-hidden="true">
+  <!-- Soft ground shadow -->
+  <ellipse cx="60" cy="66" rx="42" ry="4" fill="#7A2E3B" opacity="0.12"/>
+
+  <!-- Rear body -->
+  <path d="M18 44 C16 36, 22 28, 34 26 L48 24 C52 18, 62 14, 74 16 C86 18, 96 24, 100 32 L106 42 C108 46, 106 50, 100 50 L22 50 C16 50, 16 46, 18 44Z" fill="#7A2E3B"/>
+  <!-- Champagne roof highlight -->
+  <path d="M48 24 C54 20, 66 17, 78 20 C86 22, 92 27, 96 32 L74 32 C64 32, 54 30, 48 24Z" fill="#C9A24B" opacity="0.35"/>
+  <!-- Running board / gold trim -->
+  <path d="M20 48 H102" stroke="#C9A24B" stroke-width="1.5" stroke-linecap="round" opacity="0.85"/>
+  <!-- Front bumper gold -->
+  <path d="M100 42 L108 44 C110 45, 110 48, 107 49 L100 50" fill="#C9A24B"/>
+  <!-- Rear bumper -->
+  <path d="M16 46 C14 46, 14 49, 17 50 L22 50 L20 46Z" fill="#C9A24B" opacity="0.9"/>
+
+  <!-- Windows -->
+  <path d="M50 26 L66 25 C70 25, 74 27, 76 30 L54 30 C51 29, 50 27, 50 26Z" fill="#F5E8D5" opacity="0.75"/>
+  <path d="M78 26 C84 27, 90 30, 94 34 L78 34 C77 31, 77 28, 78 26Z" fill="#F5E8D5" opacity="0.7"/>
+
+  <!-- Door line -->
+  <path d="M70 32 V48" stroke="#521F29" stroke-width="1" opacity="0.35"/>
+
+  <!-- Headlight -->
+  <circle cx="102" cy="40" r="3.2" fill="#F5E6A8"/>
+  <circle cx="102" cy="40" r="1.6" fill="#E8C872"/>
+
+  <!-- Floral garland on hood (marigold dots) -->
+  <circle cx="88" cy="30" r="2.2" fill="#C9A24B"/>
+  <circle cx="84" cy="28" r="1.8" fill="#7A2E3B"/>
+  <circle cx="92" cy="29" r="1.6" fill="#5C6E51"/>
+  <circle cx="86" cy="32" r="1.4" fill="#C9A24B"/>
+
+  <!-- Tiny heart / monogram flag -->
+  <path d="M58 20 C58 18, 60 17, 61.5 18.5 C63 17, 65 18, 65 20 C65 22.5, 61.5 25, 61.5 25 C61.5 25, 58 22.5, 58 20Z" fill="#C9A24B"/>
+
+  <!-- Wheels -->
+  <circle cx="36" cy="50" r="9" fill="#3D171F"/>
+  <circle cx="36" cy="50" r="5.5" fill="#5C6E51"/>
+  <circle cx="36" cy="50" r="2.2" fill="#C9A24B"/>
+  <circle cx="92" cy="50" r="9" fill="#3D171F"/>
+  <circle cx="92" cy="50" r="5.5" fill="#5C6E51"/>
+  <circle cx="92" cy="50" r="2.2" fill="#C9A24B"/>
+
+  <!-- Wheel spokes hint -->
+  <path d="M36 45 V55 M31 50 H41" stroke="#FBF3E7" stroke-width="0.8" opacity="0.35"/>
+  <path d="M92 45 V55 M87 50 H97" stroke="#FBF3E7" stroke-width="0.8" opacity="0.35"/>
+</svg>
