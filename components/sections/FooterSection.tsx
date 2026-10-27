@@ -33,8 +33,8 @@ export function FooterSection() {
   };
 
   return (
-    <SectionWrapper id="footer" className="bg-primary-800 text-neutral-100" showMotifs={false}>
-      <ParticleLayer mood="night" id="footer-particles" />
+    <SectionWrapper id="footer" className="bg-[#F6EBDD] text-primary-800">
+      <ParticleLayer mood="day" id="footer-particles" />
 
       <div className="relative z-10 mx-auto max-w-2xl section-padding text-center">
         <div className="mx-auto mb-10 flex justify-center">
@@ -43,28 +43,28 @@ export function FooterSection() {
             alt={`${couple.bride.name} & ${couple.groom.name} monogram`}
             width={148}
             height={148}
-            className="h-[7.25rem] w-[7.25rem] object-contain drop-shadow-[0_0_24px_rgba(201,162,75,0.22)] md:h-36 md:w-36"
+            className="h-[7.25rem] w-[7.25rem] object-contain drop-shadow-[0_8px_18px_rgba(61,23,31,0.08)] md:h-36 md:w-36"
             unoptimized
             priority={false}
           />
         </div>
 
-        <p className="font-body text-sm tracking-widest text-secondary-300 uppercase">
+        <p className="font-body text-sm tracking-widest text-primary-700 uppercase">
           {couple.signOff.message}
         </p>
-        <h2 className="mt-4 font-script text-5xl text-gold-foil md:text-6xl">
+        <h2 className="mt-4 font-script text-5xl text-accent-600 md:text-6xl">
           {couple.signOff.names}
         </h2>
-        <p className="mt-3 font-body text-sm text-secondary-400">
+        <p className="mt-3 font-body text-sm text-primary-600">
           {couple.signOff.family}
         </p>
 
-        <OrnamentalDivider className="my-10 opacity-40" />
+        <OrnamentalDivider className="my-10" />
 
         <button
           type="button"
           onClick={handleShare}
-          className="inline-flex items-center gap-2 rounded-full border border-accent-500/40 px-6 py-2.5 font-body text-sm text-secondary-200 transition-colors hover:border-accent-400 hover:text-neutral-50"
+          className="inline-flex items-center gap-2 rounded-full border border-accent-600 px-6 py-2.5 font-body text-sm text-primary-700 transition-colors hover:border-accent-700 hover:bg-primary-800/[0.04] hover:text-primary-800"
         >
           {copied ? (
             <>
@@ -79,7 +79,7 @@ export function FooterSection() {
           )}
         </button>
 
-        <p className="mt-12 font-body text-xs text-primary-400/60">
+        <p className="mt-12 font-body text-xs text-primary-500/70">
           {/* Made with love */}
         </p>
       </div>

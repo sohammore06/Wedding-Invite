@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import { ChevronDown } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { couple, media } from "@/content";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { OrnamentalDivider } from "@/components/ui/OrnamentalDivider";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useScroll } from "@/components/providers/SmoothScrollProvider";
 
 const ParticleLayer = dynamic(
   () =>
@@ -24,6 +25,7 @@ const easeRich = [0.16, 1, 0.3, 1] as const;
 
 export function HeroSection({ active = false }: HeroSectionProps) {
   const reducedMotion = useReducedMotion();
+  const { scrollTo } = useScroll();
   const [showParticles, setShowParticles] = useState(false);
 
   useEffect(() => {
@@ -49,7 +51,7 @@ export function HeroSection({ active = false }: HeroSectionProps) {
         </motion.div>
       )}
 
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center section-padding pb-24 text-center">
+      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 pt-14 pb-12 text-center md:px-12 md:pt-24 md:pb-20">
         <motion.p
           className="mb-5 font-body text-xs tracking-[0.4em] text-primary-500 uppercase md:text-sm"
           initial={false}
@@ -120,6 +122,45 @@ export function HeroSection({ active = false }: HeroSectionProps) {
           <span className="text-gold-foil">{couple.groom.name}</span>
         </motion.h1>
 
+        <motion.button
+          type="button"
+          onClick={() => scrollTo("#story")}
+          className="mt-4 flex flex-col items-center gap-1.5"
+          aria-label="Scroll to continue"
+          initial={false}
+          animate={active ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
+          transition={{
+            duration: 0.8,
+            delay: active ? (reducedMotion ? 0.2 : 1.2) : 0,
+            ease: easeRich,
+          }}
+        >
+          <span className="font-body text-[0.6rem] tracking-[0.42em] text-primary-600 uppercase">
+            Scroll
+          </span>
+          <motion.span
+            aria-hidden
+            className="text-accent-600"
+            animate={
+              active && !reducedMotion
+                ? { y: [0, 6, 0], opacity: [0.45, 1, 0.45] }
+                : { y: 0, opacity: 0.9 }
+            }
+            transition={
+              active && !reducedMotion
+                ? {
+                    duration: 1.4,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                    delay: 1.5,
+                  }
+                : { duration: 0.2 }
+            }
+          >
+            <ArrowDown strokeWidth={1.25} className="h-4 w-4" />
+          </motion.span>
+        </motion.button>
+
         <motion.div
           initial={false}
           animate={active ? { opacity: 1 } : { opacity: 0 }}
@@ -149,35 +190,6 @@ export function HeroSection({ active = false }: HeroSectionProps) {
           </p>
         </motion.div>
 
-        <motion.div
-          className="absolute bottom-8 flex flex-col items-center gap-2"
-          initial={false}
-          animate={
-            active
-              ? reducedMotion
-                ? { opacity: 1 }
-                : { opacity: 1, y: [0, 8, 0] }
-              : { opacity: 0 }
-          }
-          transition={
-            reducedMotion
-              ? { duration: 0.35, delay: 0.5 }
-              : {
-                  opacity: { duration: 0.7, delay: 1.7 },
-                  y: {
-                    duration: 2,
-                    repeat: Infinity,
-                    ease: "easeInOut",
-                    delay: 1.9,
-                  },
-                }
-          }
-        >
-          <p className="font-body text-xs tracking-widest text-primary-400 uppercase">
-            Scroll to unfold our story
-          </p>
-          <ChevronDown className="h-5 w-5 text-accent-500" />
-        </motion.div>
       </div>
     </SectionWrapper>
   );

@@ -79,7 +79,7 @@ export const theme = {
     venue: "day" as SectionMood,
     gallery: "celebration" as SectionMood,
     rsvp: "night" as SectionMood,
-    footer: "night" as SectionMood,
+    footer: "day" as SectionMood,
   },
   gradients: {
     royal: "linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-700) 50%, var(--color-tertiary-600) 100%)",

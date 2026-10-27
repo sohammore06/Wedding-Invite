@@ -13,7 +13,7 @@ export const couple = {
   },
   wedding: {
     date: "30th November",
-    dateFull: "Sunday, 30th November 2026",
+    dateFull: "Monday, 30th November 2026",
     year: 2026,
     /** Ceremony start — countdown target (IST) */
     ceremonyAt: "2026-11-30T12:31:00+05:30",

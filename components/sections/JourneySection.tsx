@@ -74,19 +74,6 @@ export function JourneySection() {
         strokeDashoffset: totalLen,
       });
 
-      // Park car at path start before scrub begins (avoids top-left flash)
-      gsap.set(car, {
-        opacity: 1,
-        motionPath: {
-          path: pathAlign,
-          align: pathAlign,
-          alignOrigin: [0.5, 0.72],
-          autoRotate: true,
-          start: 0,
-          end: 0,
-        },
-      });
-
       gsap.set(panels, { opacity: 0, y: 14 });
       gsap.set(markerInners, {
         opacity: 0.4,
@@ -109,6 +96,11 @@ export function JourneySection() {
           end: "bottom bottom",
           scrub: 1.2,
           invalidateOnRefresh: true,
+          // Clear the previous path transform before MotionPath measures again.
+          // Otherwise the align bakes in the car's current x/y and it sits off the road.
+          onRefreshInit: () => {
+            gsap.set(car, { x: 0, y: 0, rotation: 0 });
+          },
         },
       });
 
@@ -125,10 +117,15 @@ export function JourneySection() {
             start: 0,
             end: 1,
           },
+          // Render the path start immediately, and again after each refresh,
+          // so the car is on the road before the scrub moves it.
+          immediateRender: true,
           duration: 1,
         },
         0
       );
+
+      tl.progress(0);
 
       let lastActive = -1;
       const setActive = (index: number) => {
