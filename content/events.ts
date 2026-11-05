@@ -16,7 +16,7 @@ export const events: WeddingEvent[] = [
     title: "Engagement Ceremony",
     date: "29th November 2026",
     time: "6:00 PM",
-    venue: "Celebration Hall — TBD",
+    venue: "Celebration Hall, TBD",
     description:
       "The evening begins with the exchange of rings, as two hearts formally promise a lifetime together, surrounded by the warmth and blessings of family and friends.",
     icon: "/media/icons/reception.svg",
@@ -27,7 +27,7 @@ export const events: WeddingEvent[] = [
     title: "Ganesh Sthapana",
     date: "29th November 2026",
     time: "6:45 PM",
-    venue: "Celebration Hall — TBD",
+    venue: "Celebration Hall, TBD",
     description:
       "Every auspicious beginning starts with Lord Ganesh. Ganesh Sthapana is the ritual installation and worship of Lord Ganpati, the remover of obstacles, invoking his blessings so that all the celebrations ahead unfold smoothly and joyfully.",
     icon: "/media/icons/ganesh.svg",
@@ -38,7 +38,7 @@ export const events: WeddingEvent[] = [
     title: "Pithi Ceremony",
     date: "29th November 2026",
     time: "7:15 PM",
-    venue: "Celebration Hall — TBD",
+    venue: "Celebration Hall, TBD",
     description:
       "A turmeric-filled tradition where loved ones gently apply haldi to the bride and groom, blessing them with glow, good fortune and happiness before the big day. Expect laughter, songs and plenty of yellow.",
     icon: "/media/icons/haldi.svg",

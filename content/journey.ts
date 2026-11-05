@@ -6,7 +6,7 @@ export const journeyWaypoints = [
     id: "date",
     label: "Save the Date",
     value: couple.wedding.dateFull,
-    detail: "Mark your calendars — we can’t wait to celebrate with you.",
+    detail: "Mark your calendars. We can’t wait to celebrate with you.",
     icon: "date" as const,
     scrollProgress: 0.22,
   },

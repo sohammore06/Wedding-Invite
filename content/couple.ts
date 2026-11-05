@@ -2,7 +2,7 @@ export const couple = {
   bride: {
     name: "Shruti",
     fullName: "Shruti",
-    bio: "A soul who finds joy in quiet mornings, family gatherings, and the simple beauty of traditions passed down through generations. She believes love is found in the little things — a shared laugh, a warm cup of chai, a hand held through every season.",
+    bio: "A soul who finds joy in quiet mornings, family gatherings, and the simple beauty of traditions passed down through generations. She believes love is found in the little things: a shared laugh, a warm cup of chai, a hand held through every season.",
     portrait: "/media/shruti-portrait.svg",
   },
   groom: {
@@ -24,13 +24,13 @@ export const couple = {
     body: [
       "Dear beloved family and friends,",
       "With the blessings of our elders and the grace of the divine, we invite you to witness and celebrate the sacred union of our hearts.",
-      "Your presence has always been a gift in our lives. To have you stand beside us on this most cherished day would mean the world to us — for a wedding is not merely a ceremony, but a gathering of souls who have shaped who we are.",
+      "Your presence has always been a gift in our lives. To have you stand beside us on this most cherished day would mean the world to us. For a wedding is not merely a ceremony, but a gathering of souls who have shaped who we are.",
       "We look forward to sharing this journey of love, laughter, and new beginnings with you.",
     ],
     closing: "With warmth and anticipation,",
   },
   howTheyMet:
-    "Some love stories begin with a glance; ours began with a conversation that never seemed to end. Through seasons of friendship and moments of quiet understanding, we discovered that the best journeys are those walked together — hand in hand, heart in heart.",
+    "Some love stories begin with a glance; ours began with a conversation that never seemed to end. Through seasons of friendship and moments of quiet understanding, we discovered that the best journeys are those walked together, hand in hand, heart in heart.",
   signOff: {
     message: "With love and blessings,",
     names: "Shruti & Aditya",

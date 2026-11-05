@@ -84,7 +84,7 @@ export function HeroSection({ active = false }: HeroSectionProps) {
           >
             <Image
               src={media.coupleIllustration}
-              alt={`${couple.bride.name} and ${couple.groom.name} — wedding caricature`}
+              alt={`${couple.bride.name} and ${couple.groom.name}, wedding caricature`}
               width={900}
               height={1350}
               className="h-auto w-full object-cover"
