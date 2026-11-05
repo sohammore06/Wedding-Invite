@@ -41,6 +41,6 @@ export const couple = {
     description:
       "You are cordially invited to celebrate the wedding of Shruti & Aditya on 30th November. Join us for a joyous Jain-Gujarati celebration filled with love, tradition, and blessings.",
     ogImage: "/media/og-image.svg",
-    siteUrl: "https://shruti-aditya-wedding.vercel.app",
+    siteUrl: "http://shrutiwedsaditya.life/",
   },
 } as const;
