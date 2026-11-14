@@ -32,7 +32,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: couple.seo.title,
     description: couple.seo.description,
-    images: [{ url: couple.seo.ogImage, width: 1200, height: 630 }],
+    images: [
+      {
+        url: couple.seo.ogImage,
+        width: 1200,
+        height: 630,
+        type: "image/jpeg",
+        alt: `${couple.bride.name} & ${couple.groom.name}`,
+      },
+    ],
+    url: couple.seo.siteUrl,
+    siteName: couple.seo.title,
     type: "website",
   },
   twitter: {

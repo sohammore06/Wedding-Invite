@@ -39,8 +39,8 @@ export const couple = {
   seo: {
     title: "Shruti & Aditya | Wedding Invitation",
     description:
-      "You are cordially invited to celebrate the wedding of Shruti & Aditya on 30th November. Join us for a joyous Jain-Gujarati celebration filled with love, tradition, and blessings.",
-    ogImage: "/media/og-image.svg",
-    siteUrl: "http://shrutiwedsaditya.life/",
+      "You are cordially invited to celebrate the wedding of Shruti & Aditya on 30th November. Join us for a joyous celebration filled with love, tradition, and blessings.",
+    ogImage: "/media/og-image.jpg",
+    siteUrl: "https://www.shrutiwedsaditya.life/",
   },
 } as const;
