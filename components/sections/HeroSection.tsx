@@ -84,9 +84,9 @@ export function HeroSection({ active = false }: HeroSectionProps) {
           >
             <Image
               src={media.coupleIllustration}
-              alt={`${couple.bride.name} and ${couple.groom.name}, wedding caricature`}
-              width={900}
-              height={1350}
+              alt={`${couple.bride.name} and ${couple.groom.name}, together`}
+              width={1200}
+              height={1800}
               className="h-auto w-full object-cover"
               priority
               sizes="(max-width: 768px) 90vw, 480px"

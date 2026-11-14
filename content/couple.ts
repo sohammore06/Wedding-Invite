@@ -3,13 +3,13 @@ export const couple = {
     name: "Shruti",
     fullName: "Shruti",
     bio: "A soul who finds joy in quiet mornings, family gatherings, and the simple beauty of traditions passed down through generations. She believes love is found in the little things: a shared laugh, a warm cup of chai, a hand held through every season.",
-    portrait: "/media/shruti-portrait.svg",
+    portrait: "/media/shruti-photo.webp",
   },
   groom: {
     name: "Aditya",
     fullName: "Aditya",
     bio: "Grounded in values, guided by kindness, and always ready with a smile that lights up every room. He cherishes the bonds of family and dreams of building a home filled with laughter, gratitude, and endless adventures together.",
-    portrait: "/media/aditya-portrait.svg",
+    portrait: "/media/aditya-photo.webp",
   },
   wedding: {
     date: "30th November",

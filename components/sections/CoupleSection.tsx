@@ -69,13 +69,28 @@ export function CoupleSection() {
         <div className="grid gap-10 md:grid-cols-2 md:gap-12">
           <div ref={brideRef} className="glass-card overflow-hidden p-6 md:p-8">
             <div className="mb-6 flex justify-center">
-              <Image
-                src={couple.bride.portrait}
-                alt={couple.bride.name}
-                width={200}
-                height={240}
-                className="rounded-xl object-cover"
-              />
+              <div className="relative w-56 md:w-64">
+                <div
+                  className="relative overflow-hidden rounded-2xl"
+                  style={{
+                    boxShadow:
+                      "0 18px 36px rgba(122, 46, 59, 0.14), 0 0 0 1px rgba(201, 162, 75, 0.35)",
+                  }}
+                >
+                  <Image
+                    src={couple.bride.portrait}
+                    alt={`Portrait of ${couple.bride.name}`}
+                    width={720}
+                    height={900}
+                    className="h-auto w-full object-cover"
+                    sizes="(max-width: 768px) 224px, 256px"
+                  />
+                </div>
+                <div className="pointer-events-none absolute -top-1.5 -left-1.5 h-6 w-6 rounded-tl-lg border-t-2 border-l-2 border-accent-400/60" />
+                <div className="pointer-events-none absolute -top-1.5 -right-1.5 h-6 w-6 rounded-tr-lg border-t-2 border-r-2 border-accent-400/60" />
+                <div className="pointer-events-none absolute -bottom-1.5 -left-1.5 h-6 w-6 rounded-bl-lg border-b-2 border-l-2 border-accent-400/60" />
+                <div className="pointer-events-none absolute -bottom-1.5 -right-1.5 h-6 w-6 rounded-br-lg border-b-2 border-r-2 border-accent-400/60" />
+              </div>
             </div>
             <h3 className="mb-3 text-center font-script text-4xl text-gold-foil">
               {couple.bride.name}
@@ -87,13 +102,28 @@ export function CoupleSection() {
 
           <div ref={groomRef} className="glass-card overflow-hidden p-6 md:p-8">
             <div className="mb-6 flex justify-center">
-              <Image
-                src={couple.groom.portrait}
-                alt={couple.groom.name}
-                width={200}
-                height={240}
-                className="rounded-xl object-cover"
-              />
+              <div className="relative w-56 md:w-64">
+                <div
+                  className="relative overflow-hidden rounded-2xl"
+                  style={{
+                    boxShadow:
+                      "0 18px 36px rgba(122, 46, 59, 0.14), 0 0 0 1px rgba(201, 162, 75, 0.35)",
+                  }}
+                >
+                  <Image
+                    src={couple.groom.portrait}
+                    alt={`Portrait of ${couple.groom.name}`}
+                    width={720}
+                    height={900}
+                    className="h-auto w-full object-cover"
+                    sizes="(max-width: 768px) 224px, 256px"
+                  />
+                </div>
+                <div className="pointer-events-none absolute -top-1.5 -left-1.5 h-6 w-6 rounded-tl-lg border-t-2 border-l-2 border-accent-400/60" />
+                <div className="pointer-events-none absolute -top-1.5 -right-1.5 h-6 w-6 rounded-tr-lg border-t-2 border-r-2 border-accent-400/60" />
+                <div className="pointer-events-none absolute -bottom-1.5 -left-1.5 h-6 w-6 rounded-bl-lg border-b-2 border-l-2 border-accent-400/60" />
+                <div className="pointer-events-none absolute -bottom-1.5 -right-1.5 h-6 w-6 rounded-br-lg border-b-2 border-r-2 border-accent-400/60" />
+              </div>
             </div>
             <h3 className="mb-3 text-center font-script text-4xl text-gold-foil">
               {couple.groom.name}

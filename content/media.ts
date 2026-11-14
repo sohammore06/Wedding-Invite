@@ -12,7 +12,7 @@ export const media = {
       right: "/media/envelope/flap-right.png",
     },
   },
-  coupleIllustration: "/media/couple-caricature.webp",
+  coupleIllustration: "/media/couple-photo.webp",
   journey: {
     car: "/media/journey/car.svg",
     road: "/media/journey/road.svg",
@@ -27,8 +27,8 @@ export const media = {
       "M 72 36 C 160 70, 292 95, 300 170 C 308 250, 70 290, 78 380 C 86 470, 250 510, 288 590",
   },
   portraits: {
-    bride: "/media/shruti-portrait.svg",
-    groom: "/media/aditya-portrait.svg",
+    bride: "/media/shruti-photo.webp",
+    groom: "/media/aditya-photo.webp",
   },
   gallery: [] as string[],
   audio: {

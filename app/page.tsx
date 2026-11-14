@@ -37,7 +37,7 @@ export default function HomePage() {
   const [extrasReady, setExtrasReady] = useState(false);
   const { isScrollLocked } = useScroll();
 
-  // Warm the caricature cache on first paint
+  // Warm the couple photo cache on first paint
   useEffect(() => {
     const link = document.createElement("link");
     link.rel = "preload";
