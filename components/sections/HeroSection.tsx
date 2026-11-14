@@ -99,10 +99,6 @@ export function HeroSection({ active = false }: HeroSectionProps) {
               }}
             />
           </div>
-          <div className="pointer-events-none absolute -top-2 -left-2 h-8 w-8 rounded-tl-lg border-t-2 border-l-2 border-accent-400/60" />
-          <div className="pointer-events-none absolute -top-2 -right-2 h-8 w-8 rounded-tr-lg border-t-2 border-r-2 border-accent-400/60" />
-          <div className="pointer-events-none absolute -bottom-2 -left-2 h-8 w-8 rounded-bl-lg border-b-2 border-l-2 border-accent-400/60" />
-          <div className="pointer-events-none absolute -bottom-2 -right-2 h-8 w-8 rounded-br-lg border-b-2 border-r-2 border-accent-400/60" />
         </motion.div>
 
         <motion.h1

@@ -86,10 +86,6 @@ export function CoupleSection() {
                     sizes="(max-width: 768px) 224px, 256px"
                   />
                 </div>
-                <div className="pointer-events-none absolute -top-1.5 -left-1.5 h-6 w-6 rounded-tl-lg border-t-2 border-l-2 border-accent-400/60" />
-                <div className="pointer-events-none absolute -top-1.5 -right-1.5 h-6 w-6 rounded-tr-lg border-t-2 border-r-2 border-accent-400/60" />
-                <div className="pointer-events-none absolute -bottom-1.5 -left-1.5 h-6 w-6 rounded-bl-lg border-b-2 border-l-2 border-accent-400/60" />
-                <div className="pointer-events-none absolute -bottom-1.5 -right-1.5 h-6 w-6 rounded-br-lg border-b-2 border-r-2 border-accent-400/60" />
               </div>
             </div>
             <h3 className="mb-3 text-center font-script text-4xl text-gold-foil">
@@ -119,10 +115,6 @@ export function CoupleSection() {
                     sizes="(max-width: 768px) 224px, 256px"
                   />
                 </div>
-                <div className="pointer-events-none absolute -top-1.5 -left-1.5 h-6 w-6 rounded-tl-lg border-t-2 border-l-2 border-accent-400/60" />
-                <div className="pointer-events-none absolute -top-1.5 -right-1.5 h-6 w-6 rounded-tr-lg border-t-2 border-r-2 border-accent-400/60" />
-                <div className="pointer-events-none absolute -bottom-1.5 -left-1.5 h-6 w-6 rounded-bl-lg border-b-2 border-l-2 border-accent-400/60" />
-                <div className="pointer-events-none absolute -bottom-1.5 -right-1.5 h-6 w-6 rounded-br-lg border-b-2 border-r-2 border-accent-400/60" />
               </div>
             </div>
             <h3 className="mb-3 text-center font-script text-4xl text-gold-foil">
