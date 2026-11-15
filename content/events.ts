@@ -65,26 +65,6 @@ export const events: WeddingEvent[] = [
     order: 5,
   },
   {
-    id: "varghodo",
-    title: "Varghodo",
-    date: "30th November 2026",
-    time: "10:45 AM",
-    description:
-      "The groom's joyful procession, with dhol, music and dancing, as he arrives to the wedding venue, accompanied by family and friends.",
-    icon: "/media/icons/baraat.svg",
-    order: 6,
-  },
-  {
-    id: "agman",
-    title: "Agman",
-    date: "30th November 2026",
-    time: "11:15 AM",
-    description:
-      "The warm welcome of the groom's family, where the bride's family greets the baraat with tilak, aarti and heartfelt blessings.",
-    icon: "/media/icons/mehendi.svg",
-    order: 7,
-  },
-  {
     id: "lagna-vidhi",
     title: "Lagna Vidhi",
     date: "30th November 2026",
@@ -92,7 +72,7 @@ export const events: WeddingEvent[] = [
     description:
       "The sacred wedding ceremony. In the presence of the holy fire and with the chanting of mantras, the couple takes their vows and begins life as one.",
     icon: "/media/icons/wedding.svg",
-    order: 8,
+    order: 6,
     isHero: true,
   },
 ];
