@@ -39,7 +39,11 @@ export const couple = {
   seo: {
     title: "Shruti & Aditya | Wedding Invitation",
     description:
-      "You are cordially invited to celebrate the wedding of Shruti & Aditya on 29th & 30th November. Join us for a joyous celebration filled with love, tradition, and blessings.",
+      "Two hearts, one forever! ❤️\n\n" +
+      "A beautiful new chapter is about to begin, and we would be so happy to have your love, presence and blessings as we celebrate our special day.\n\n" +
+      "Sharing our wedding invitation with you! 💍✨\n\n" +
+      "With love,\n" +
+      "Shruti & Aditya ❤️",
     ogImage: "/media/og-image.jpg",
     siteUrl: "https://www.shrutiwedsaditya.life/",
   },
