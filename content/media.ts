@@ -13,19 +13,6 @@ export const media = {
     },
   },
   coupleIllustration: "/media/couple-photo.webp",
-  journey: {
-    car: "/media/journey/car.svg",
-    road: "/media/journey/road.svg",
-    venueGate: "/media/journey/venue-gate.svg",
-    waypoints: {
-      date: "/media/journey/waypoint-date.svg",
-      venue: "/media/journey/waypoint-venue.svg",
-      location: "/media/journey/waypoint-location.svg",
-    },
-    /** Portrait winding road — car travels top → destination (viewBox 360×640) */
-    roadPath:
-      "M 72 36 C 160 70, 292 95, 300 170 C 308 250, 70 290, 78 380 C 86 470, 250 510, 288 590",
-  },
   portraits: {
     bride: "/media/shruti-photo.webp",
     groom: "/media/aditya-photo.webp",

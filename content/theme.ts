@@ -73,7 +73,6 @@ export const theme = {
     envelope: "day" as SectionMood,
     hero: "day" as SectionMood,
     story: "day" as SectionMood,
-    journey: "day" as SectionMood,
     couple: "celebration" as SectionMood,
     timeline: "celebration" as SectionMood,
     venue: "day" as SectionMood,

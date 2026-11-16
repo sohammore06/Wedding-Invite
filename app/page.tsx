@@ -16,12 +16,6 @@ import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import { MusicControl } from "@/components/ui/MusicControl";
 import { media } from "@/content";
 
-const JourneySection = dynamic(
-  () =>
-    import("@/components/sections/JourneySection").then((m) => m.JourneySection),
-  { ssr: false }
-);
-
 const AmbientLifeLayer = dynamic(
   () =>
     import("@/components/ambient/AmbientLifeLayer").then(
@@ -76,7 +70,6 @@ export default function HomePage() {
       >
         <HeroSection active={heroActive} />
         <StorySection />
-        <JourneySection />
         <CoupleSection />
         <TimelineSection />
         <VenueSection />
