@@ -13,7 +13,7 @@ export { theme, type SectionMood, type Theme } from "./theme";
 export type { Dictionary, Locale } from "./i18n/types";
 
 /** URL path for each language, relative to the site root */
-export const localePaths: Record<Locale, string> = { en: "", mr: "marathi" };
+export const localePaths: Record<Locale, string> = { en: "", mr: "mr" };
 
 function buildContent(t: Dictionary, locale: Locale) {
   return {
