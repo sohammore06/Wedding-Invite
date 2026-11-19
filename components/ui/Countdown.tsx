@@ -1,7 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { couple } from "@/content";
+import type { Locale } from "@/content";
+import { useContent } from "@/components/providers/LocaleProvider";
 
 type TimeLeft = {
   days: number;
@@ -26,8 +27,11 @@ function getTimeLeft(targetMs: number): TimeLeft {
   return { days, hours, minutes, seconds, done: false };
 }
 
-function pad(n: number) {
-  return String(n).padStart(2, "0");
+function formatNumber(n: number, locale: Locale, minDigits = 1) {
+  return new Intl.NumberFormat(locale === "mr" ? "mr-IN-u-nu-deva" : "en-IN", {
+    minimumIntegerDigits: minDigits,
+    useGrouping: false,
+  }).format(n);
 }
 
 type CountdownProps = {
@@ -35,6 +39,7 @@ type CountdownProps = {
 };
 
 export function Countdown({ className = "" }: CountdownProps) {
+  const { couple, ui, locale } = useContent();
   const targetMs = new Date(couple.wedding.ceremonyAt).getTime();
   const [time, setTime] = useState<TimeLeft | null>(null);
 
@@ -60,21 +65,21 @@ export function Countdown({ className = "" }: CountdownProps) {
     return (
       <div className={`mx-auto w-full max-w-md text-center ${className}`}>
         <p className="font-display text-xl tracking-wide text-primary-700 md:text-2xl">
-          The celebration has begun
+          {ui.countdownDone}
         </p>
         <p className="mt-2 font-body text-xs tracking-[0.28em] text-accent-600 uppercase">
-          With love & blessings
+          {ui.countdownDoneNote}
         </p>
       </div>
     );
   }
 
   const units = [
-    { label: "Days", value: String(time.days) },
-    { label: "Hours", value: pad(time.hours) },
-    { label: "Mins", value: pad(time.minutes) },
-    { label: "Secs", value: pad(time.seconds) },
-  ] as const;
+    { label: ui.countdownUnits.days, value: formatNumber(time.days, locale) },
+    { label: ui.countdownUnits.hours, value: formatNumber(time.hours, locale, 2) },
+    { label: ui.countdownUnits.minutes, value: formatNumber(time.minutes, locale, 2) },
+    { label: ui.countdownUnits.seconds, value: formatNumber(time.seconds, locale, 2) },
+  ];
 
   return (
     <div
@@ -82,10 +87,15 @@ export function Countdown({ className = "" }: CountdownProps) {
       role="timer"
       aria-live="polite"
       aria-atomic="true"
-      aria-label={`Countdown to the wedding: ${time.days} days, ${time.hours} hours, ${time.minutes} minutes, ${time.seconds} seconds`}
+      aria-label={ui.countdownAria(
+        formatNumber(time.days, locale),
+        formatNumber(time.hours, locale),
+        formatNumber(time.minutes, locale),
+        formatNumber(time.seconds, locale)
+      )}
     >
       <p className="mb-5 font-body text-[0.65rem] tracking-[0.35em] text-primary-400 uppercase md:text-xs">
-        Until we meet
+        {ui.countdownLabel}
       </p>
 
       <div className="flex items-stretch justify-center gap-0">

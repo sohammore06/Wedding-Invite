@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { MapPin, ExternalLink } from "lucide-react";
-import { venue } from "@/content";
+import { useContent } from "@/components/providers/LocaleProvider";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { OrnamentalDivider } from "@/components/ui/OrnamentalDivider";
 import { ParticleLayer } from "@/components/ambient/ParticleLayer";
@@ -19,6 +19,7 @@ export function VenueSection() {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const [mapLoaded, setMapLoaded] = useState(false);
   const reducedMotion = useReducedMotion();
+  const { venue, ui } = useContent();
 
   useGSAP(
     () => {
@@ -43,7 +44,7 @@ export function VenueSection() {
 
       <div className="relative z-10 mx-auto max-w-4xl section-padding">
         <h2 className="mb-2 text-center font-display text-3xl text-gold-foil md:text-4xl">
-          Venue
+          {ui.venueHeading}
         </h2>
         <OrnamentalDivider className="mx-auto mb-12 w-full max-w-xs" />
 
@@ -59,7 +60,7 @@ export function VenueSection() {
             rel="noopener noreferrer"
             className="btn-royal mt-6 inline-flex gap-2"
           >
-            Get Directions
+            {ui.getDirections}
             <ExternalLink className="h-4 w-4" />
           </a>
         </div>
@@ -70,9 +71,9 @@ export function VenueSection() {
         >
           {mapLoaded ? (
             <iframe
-              title={`Map to ${venue.name}`}
+              title={ui.mapTitle(venue.name)}
               src={`https://www.google.com/maps?q=${encodeURIComponent(
-                `${venue.name}, ${venue.address}`
+                venue.mapsQuery
               )}&ll=${venue.lat},${venue.lng}&z=16&output=embed`}
               className="h-64 w-full md:h-80"
               loading="lazy"
@@ -82,7 +83,7 @@ export function VenueSection() {
           ) : (
             <div className="flex h-64 items-center justify-center bg-secondary-100 md:h-80">
               <p className="font-body text-sm text-primary-400">
-                Map loads as you scroll near
+                {ui.mapPlaceholder}
               </p>
             </div>
           )}

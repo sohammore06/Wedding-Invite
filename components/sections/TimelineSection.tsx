@@ -5,7 +5,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import { events } from "@/content";
+import type { WeddingEvent } from "@/content";
+import { useContent } from "@/components/providers/LocaleProvider";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { OrnamentalDivider } from "@/components/ui/OrnamentalDivider";
 import { ParticleLayer } from "@/components/ambient/ParticleLayer";
@@ -18,6 +19,7 @@ export function TimelineSection() {
   const timelineContainerRef = useRef<HTMLDivElement>(null);
   const lineRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
+  const { events, ui } = useContent();
 
   const sortedEvents = [...events].sort((a, b) => a.order - b.order);
 
@@ -55,10 +57,10 @@ export function TimelineSection() {
 
       <div className="relative z-10 mx-auto max-w-3xl section-padding">
         <h2 className="mb-2 text-center font-display text-3xl text-gold-foil md:text-4xl">
-          Wedding Events
+          {ui.eventsHeading}
         </h2>
         <p className="mb-4 text-center font-body text-sm text-primary-500">
-          Celebrations across our sacred days
+          {ui.eventsSubheading}
         </p>
         <OrnamentalDivider className="mx-auto mb-12 w-full max-w-xs" />
 
@@ -90,7 +92,7 @@ function TimelineEventCard({
   index,
   reducedMotion,
 }: {
-  event: (typeof events)[number];
+  event: WeddingEvent;
   index: number;
   reducedMotion: boolean;
 }) {

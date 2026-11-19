@@ -3,13 +3,15 @@
 import { useState } from "react";
 import Image from "next/image";
 import { Share2, Check } from "lucide-react";
-import { couple, media } from "@/content";
+import { media } from "@/content";
+import { useContent } from "@/components/providers/LocaleProvider";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { OrnamentalDivider } from "@/components/ui/OrnamentalDivider";
 import { ParticleLayer } from "@/components/ambient/ParticleLayer";
 
 export function FooterSection() {
   const [copied, setCopied] = useState(false);
+  const { couple, ui } = useContent();
 
   const handleShare = async () => {
     const url = couple.seo.siteUrl;
@@ -40,7 +42,7 @@ export function FooterSection() {
         <div className="mx-auto mb-10 flex justify-center">
           <Image
             src={media.motifs.monogram}
-            alt={`${couple.bride.name} & ${couple.groom.name} monogram`}
+            alt={ui.monogramAlt(couple.bride.name, couple.groom.name)}
             width={148}
             height={148}
             className="h-[7.25rem] w-[7.25rem] object-contain drop-shadow-[0_8px_18px_rgba(61,23,31,0.08)] md:h-36 md:w-36"
@@ -69,12 +71,12 @@ export function FooterSection() {
           {copied ? (
             <>
               <Check className="h-4 w-4" />
-              Link Copied
+              {ui.linkCopied}
             </>
           ) : (
             <>
               <Share2 className="h-4 w-4" />
-              Share Invitation
+              {ui.shareInvitation}
             </>
           )}
         </button>

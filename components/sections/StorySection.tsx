@@ -5,7 +5,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import { couple, media } from "@/content";
+import { media } from "@/content";
+import { useContent } from "@/components/providers/LocaleProvider";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { OrnamentalDivider } from "@/components/ui/OrnamentalDivider";
 import { Countdown } from "@/components/ui/Countdown";
@@ -21,6 +22,7 @@ export function StorySection() {
   const closingRef = useRef<HTMLParagraphElement>(null);
   const motifRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
+  const { couple } = useContent();
 
   useGSAP(
     () => {

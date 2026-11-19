@@ -211,6 +211,17 @@
   }
 }
 
+/* Wide letter-spacing pulls Devanagari letters and vowel signs apart */
+:lang(mr) [class*="tracking-"] {
+  letter-spacing: normal;
+}
+
+/* The gold text gradient only paints inside an inline box sized by the Latin font,
+   which cuts off tall Devanagari vowel signs. Inline padding extends it without moving text. */
+:lang(mr) span.text-gold-foil {
+  padding-block: 0.3em;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

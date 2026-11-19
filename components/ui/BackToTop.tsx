@@ -5,9 +5,11 @@ import { useLenis } from "lenis/react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUp } from "lucide-react";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
+import { useContent } from "@/components/providers/LocaleProvider";
 
 export function BackToTop() {
   const { isScrollLocked, scrollTo } = useScroll();
+  const { ui } = useContent();
   const [visible, setVisible] = useState(false);
   const visibleRef = useRef(false);
 
@@ -30,7 +32,7 @@ export function BackToTop() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: 20 }}
-          aria-label="Back to top"
+          aria-label={ui.backToTop}
         >
           <ArrowUp className="h-5 w-5 text-accent-600" />
         </motion.button>

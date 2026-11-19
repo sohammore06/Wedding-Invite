@@ -1,5 +1,11 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Jost, Tangerine } from "next/font/google";
+import {
+  Cormorant_Garamond,
+  Jost,
+  Mukta,
+  Tangerine,
+  Tiro_Devanagari_Marathi,
+} from "next/font/google";
 import { couple } from "@/content";
 import { AppProviders } from "@/components/providers/AppProviders";
 import "./globals.css";
@@ -23,6 +29,24 @@ const scriptFont = Tangerine({
   variable: "--font-script",
   weight: ["400", "700"],
   display: "swap",
+});
+
+// Devanagari-only faces: the browser downloads them only when Marathi text is on the page.
+const devanagariDisplayFont = Tiro_Devanagari_Marathi({
+  subsets: ["devanagari"],
+  variable: "--font-deva-display",
+  weight: "400",
+  style: ["normal", "italic"],
+  display: "swap",
+  preload: false,
+});
+
+const devanagariBodyFont = Mukta({
+  subsets: ["devanagari"],
+  variable: "--font-deva-body",
+  weight: ["300", "400", "500", "600"],
+  display: "swap",
+  preload: false,
 });
 
 export const metadata: Metadata = {
@@ -65,7 +89,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${displayFont.variable} ${bodyFont.variable} ${scriptFont.variable}`}
+      className={`${displayFont.variable} ${bodyFont.variable} ${scriptFont.variable} ${devanagariDisplayFont.variable} ${devanagariBodyFont.variable}`}
       suppressHydrationWarning
     >
       <body suppressHydrationWarning>

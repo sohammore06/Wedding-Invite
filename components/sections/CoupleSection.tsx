@@ -5,7 +5,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
-import { couple } from "@/content";
+import { useContent } from "@/components/providers/LocaleProvider";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { OrnamentalDivider } from "@/components/ui/OrnamentalDivider";
 import { ParticleLayer } from "@/components/ambient/ParticleLayer";
@@ -19,6 +19,7 @@ export function CoupleSection() {
   const groomRef = useRef<HTMLDivElement>(null);
   const quoteRef = useRef<HTMLDivElement>(null);
   const reducedMotion = useReducedMotion();
+  const { couple, ui } = useContent();
 
   useGSAP(
     () => {
@@ -62,7 +63,7 @@ export function CoupleSection() {
 
       <div className="relative z-10 mx-auto max-w-5xl section-padding">
         <h2 className="mb-2 text-center font-display text-3xl text-gold-foil md:text-4xl">
-          The Couple
+          {ui.coupleHeading}
         </h2>
         <OrnamentalDivider className="mx-auto mb-12 w-full max-w-xs" />
 
@@ -79,7 +80,7 @@ export function CoupleSection() {
                 >
                   <Image
                     src={couple.bride.portrait}
-                    alt={`Portrait of ${couple.bride.name}`}
+                    alt={ui.portraitAlt(couple.bride.name)}
                     width={720}
                     height={900}
                     className="h-auto w-full object-cover"
@@ -108,7 +109,7 @@ export function CoupleSection() {
                 >
                   <Image
                     src={couple.groom.portrait}
-                    alt={`Portrait of ${couple.groom.name}`}
+                    alt={ui.portraitAlt(couple.groom.name)}
                     width={720}
                     height={900}
                     className="h-auto w-full object-cover"

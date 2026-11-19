@@ -5,11 +5,12 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import { ArrowDown } from "lucide-react";
-import { couple, media } from "@/content";
+import { media } from "@/content";
 import { SectionWrapper } from "@/components/ui/SectionWrapper";
 import { OrnamentalDivider } from "@/components/ui/OrnamentalDivider";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
+import { useContent } from "@/components/providers/LocaleProvider";
 
 const ParticleLayer = dynamic(
   () =>
@@ -26,6 +27,7 @@ const easeRich = [0.16, 1, 0.3, 1] as const;
 export function HeroSection({ active = false }: HeroSectionProps) {
   const reducedMotion = useReducedMotion();
   const { scrollTo } = useScroll();
+  const { couple, ui } = useContent();
   const [showParticles, setShowParticles] = useState(false);
 
   useEffect(() => {
@@ -84,7 +86,7 @@ export function HeroSection({ active = false }: HeroSectionProps) {
           >
             <Image
               src={media.coupleIllustration}
-              alt={`${couple.bride.name} and ${couple.groom.name}, together`}
+              alt={ui.heroPhotoAlt(couple.bride.name, couple.groom.name)}
               width={1200}
               height={1800}
               className="h-auto w-full object-cover"
@@ -113,7 +115,7 @@ export function HeroSection({ active = false }: HeroSectionProps) {
         >
           <span className="text-gold-foil">{couple.bride.name}</span>
           <span className="mx-2 font-display text-2xl text-primary-600 md:mx-3 md:text-3xl">
-            weds
+            {ui.weds}
           </span>
           <span className="text-gold-foil">{couple.groom.name}</span>
         </motion.h1>
@@ -122,7 +124,7 @@ export function HeroSection({ active = false }: HeroSectionProps) {
           type="button"
           onClick={() => scrollTo("#story")}
           className="mt-4 flex flex-col items-center gap-1.5"
-          aria-label="Scroll to continue"
+          aria-label={ui.scrollAria}
           initial={false}
           animate={active ? { opacity: 1, y: 0 } : { opacity: 0, y: 8 }}
           transition={{
@@ -132,7 +134,7 @@ export function HeroSection({ active = false }: HeroSectionProps) {
           }}
         >
           <span className="font-body text-[0.6rem] tracking-[0.42em] text-primary-600 uppercase">
-            Scroll
+            {ui.scroll}
           </span>
           <motion.span
             aria-hidden

@@ -7,6 +7,7 @@ import { media } from "@/content";
 import { useAudio } from "@/components/providers/AudioProvider";
 import { useScroll } from "@/components/providers/SmoothScrollProvider";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
+import { useContent } from "@/components/providers/LocaleProvider";
 
 type EnvelopeGateProps = {
   /** Fires when flaps begin opening — activate hero underneath */
@@ -30,6 +31,7 @@ export function EnvelopeGate({ onOpenStart, onOpenComplete }: EnvelopeGateProps)
   const { startMusic } = useAudio();
   const { unlockScroll } = useScroll();
   const reducedMotion = useReducedMotion();
+  const { ui } = useContent();
 
   const handleOpen = useCallback(() => {
     if (phase !== "closed") return;
@@ -172,7 +174,7 @@ export function EnvelopeGate({ onOpenStart, onOpenComplete }: EnvelopeGateProps)
         onClick={handleOpen}
         disabled={isOpening}
         className="absolute inset-0 z-30 flex cursor-pointer flex-col items-center justify-center border-0 bg-transparent outline-none"
-        aria-label="Click to open invitation"
+        aria-label={ui.envelopeAria}
         suppressHydrationWarning
       >
         <AnimatePresence>
@@ -191,7 +193,7 @@ export function EnvelopeGate({ onOpenStart, onOpenComplete }: EnvelopeGateProps)
               >
                 <Image
                   src={media.envelope.waxSeal}
-                  alt="Wax seal"
+                  alt={ui.waxSealAlt}
                   width={132}
                   height={132}
                   className="h-full w-full object-contain drop-shadow-[0_10px_24px_rgba(90,60,20,0.35)]"
@@ -205,7 +207,7 @@ export function EnvelopeGate({ onOpenStart, onOpenComplete }: EnvelopeGateProps)
                 animate={{ opacity: [0.45, 1, 0.45] }}
                 transition={{ duration: 2.4, repeat: Infinity }}
               >
-                Click to open
+                {ui.envelopeCta}
               </motion.p>
             </motion.div>
           )}

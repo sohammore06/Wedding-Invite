@@ -3,9 +3,11 @@
 import { motion } from "framer-motion";
 import { Volume2, VolumeX } from "lucide-react";
 import { useAudio } from "@/components/providers/AudioProvider";
+import { useContent } from "@/components/providers/LocaleProvider";
 
 export function MusicControl() {
   const { isMuted, isPlaying, hasStarted, toggleMute, startMusic } = useAudio();
+  const { ui } = useContent();
 
   const handleClick = () => {
     if (!hasStarted) {
@@ -23,7 +25,7 @@ export function MusicControl() {
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 0.3, duration: 0.4 }}
-      aria-label={!hasStarted ? "Tap to start music" : isMuted ? "Unmute music" : "Mute music"}
+      aria-label={!hasStarted ? ui.musicStart : isMuted ? ui.musicUnmute : ui.musicMute}
     >
       {!hasStarted || isMuted ? (
         <VolumeX className="h-5 w-5 text-primary-600" />

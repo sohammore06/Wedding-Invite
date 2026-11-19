@@ -71,9 +71,9 @@ const config: Config = {
         },
       },
       fontFamily: {
-        display: ["var(--font-display)", "Georgia", "serif"],
-        body: ["var(--font-body)", "system-ui", "sans-serif"],
-        script: ["var(--font-script)", "cursive"],
+        display: ["var(--font-display)", "var(--font-deva-display)", "Georgia", "serif"],
+        body: ["var(--font-body)", "var(--font-deva-body)", "system-ui", "sans-serif"],
+        script: ["var(--font-script)", "var(--font-deva-display)", "cursive"],
       },
       backgroundImage: {
         "gold-foil": "var(--gradient-gold-foil)",
