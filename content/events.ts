@@ -14,12 +14,7 @@ export type WeddingEvent = {
 };
 
 const eventDetails = [
-  { id: "engagement", icon: "/media/icons/reception.svg", order: 1 },
-  { id: "ganesh-sthapana", icon: "/media/icons/ganesh.svg", order: 2 },
-  { id: "pithi", icon: "/media/icons/haldi.svg", order: 3 },
-  { id: "sangeet-garba", icon: "/media/icons/garba.svg", order: 4 },
-  { id: "grah-shanti", icon: "/media/icons/jain.svg", order: 5 },
-  { id: "lagna-vidhi", icon: "/media/icons/wedding.svg", order: 6, isHero: true },
+  { id: "lagna-vidhi", icon: "/media/icons/wedding.svg", order: 1, isHero: true },
 ] as const;
 
 export type EventId = (typeof eventDetails)[number]["id"];

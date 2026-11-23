@@ -39,41 +39,6 @@ export const en: Dictionary = {
     description: "",
   },
   events: {
-    engagement: {
-      title: "Engagement Ceremony",
-      date: "29th November 2026",
-      time: "6:00 PM",
-      description:
-        "The evening begins with the exchange of rings, as two hearts formally promise a lifetime together, surrounded by the warmth and blessings of family and friends.",
-    },
-    "ganesh-sthapana": {
-      title: "Ganesh Sthapana",
-      date: "29th November 2026",
-      time: "6:45 PM",
-      description:
-        "Every auspicious beginning starts with Lord Ganesh. Ganesh Sthapana is the ritual installation and worship of Lord Ganpati, the remover of obstacles, invoking his blessings so that all the celebrations ahead unfold smoothly and joyfully.",
-    },
-    pithi: {
-      title: "Pithi Ceremony",
-      date: "29th November 2026",
-      time: "7:15 PM",
-      description:
-        "A turmeric-filled tradition where loved ones gently apply haldi to the bride and groom, blessing them with glow, good fortune and happiness before the big day. Expect laughter, songs and plenty of yellow.",
-    },
-    "sangeet-garba": {
-      title: "Sangeet & Garba Night",
-      date: "29th November 2026",
-      time: "8:30 PM onwards",
-      description:
-        "Come dressed in your finest festive attire and dance the night away with us. Expect garba, dandiya, live music and performances by family and friends.",
-    },
-    "grah-shanti": {
-      title: "Grah Shanti Pooja",
-      date: "30th November 2026",
-      time: "8:00 AM",
-      description:
-        "A sacred pooja to appease the planetary deities, seeking peace, prosperity and harmony as the couple begins their new journey together.",
-    },
     "lagna-vidhi": {
       title: "Lagna Vidhi",
       date: "30th November 2026",
